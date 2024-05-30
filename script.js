@@ -47,15 +47,25 @@ document.getElementById("plateForm").addEventListener("submit", function(event) 
     
     var resultHeader = document.querySelector("#result h2");
     var infoIcon = document.createElement("i");
-    infoIcon.classList.add("fas", "fa-info-circle", "info-icon",);
-    infoIcon.style.marginLeft = "10px";
-    infoIcon.style.color = "#74C0FC";
-    infoIcon.addEventListener("click", function() {
-        var infoWindow = window.open("https://names4brands.com/images/indian-numerology-alphabet-chart-download.jpg", "_blank", "width=600,height=400");
-        infoWindow.focus();
-    });
-    resultHeader.appendChild(infoIcon);
-    
+        infoIcon.classList.add("fas", "fa-info-circle", "info-icon");
+        infoIcon.style.marginLeft = "10px";
+        infoIcon.style.color = "#74C0FC";
+        infoIcon.addEventListener("click", function() {
+        var modal = document.getElementById("myModal");
+        modal.style.display = "block";
+
+        var span = document.getElementsByClassName("close")[0];
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+            modal.style.display = "none";
+            }
+        }
+        });
+        resultHeader.appendChild(infoIcon);
 
     var letterSum = Array.from(letters).reduce(function(sum, char) {
         return sum + (letterValues[char] || 0);
