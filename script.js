@@ -119,11 +119,11 @@ document.getElementById("searchInput").addEventListener("input", function() {
     var searchValue = this.value.toLowerCase();
     var rows = document.getElementById("otherNumbersTable").getElementsByTagName("tr");
 
-    if (searchValue) {
-        document.getElementById("limitDropdown").value = "all";
-    } else {
-        document.getElementById("limitDropdown").value = "20";
-    }
+    // if (searchValue) {
+    //     document.getElementById("limitDropdown").value = "all";
+    // } else {
+    //     document.getElementById("limitDropdown").value = "20";
+    // }
 
     for (var i = 1; i < rows.length; i++) {
         var plateNumber = rows[i].getElementsByTagName("td")[0].textContent.toLowerCase();
