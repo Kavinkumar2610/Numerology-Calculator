@@ -13,9 +13,9 @@
         <h3 class="subtitle">Currently only Malaysia plate series are supported</h3>
         <form id="plateForm">
             <label for="letters">Enter your plate number series (e.g., VEV)*:</label>
-            <input type="text" id="letters" name="letters" pattern="[A-Za-z]+" required>
+            <input type="text" id="letters" name="letters" pattern="[A-Za-z]+" required title="Please enter letters only.">
             <label for="endingSeries">Enter your ending plate number series (optional):</label>
-            <input type="text" id="endingSeries" name="endingSeries" pattern="[A-Za-z]*">
+            <input type="text" id="endingSeries" name="endingSeries" pattern="[A-Za-z]*" title="Please enter letters only.">
             <label for="digitSum">Enter your plate number (1-9999)*:</label>
             <input type="number" id="digitSum" name="digitSum" min="1" max="9999" required>
             <label for="desiredTotal1">Enter your desired total*:</label>
